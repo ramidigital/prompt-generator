@@ -21,7 +21,8 @@ padding-right: 5rem;
 
 # Logo and title
 st.image("difc-logo.svg", width = 150)
-st.title("DIFC Prompt Generator")
+st.image("prompt-bot.png", width = 400)
+#st.title("DIFC Prompt Generator")
 
 client = OpenAI(api_key=st.secrets["api_key"])
 variables = []
