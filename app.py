@@ -19,26 +19,9 @@ padding-right: 5rem;
 </style>
 """, unsafe_allow_html=True)
 
-# Change column alignment
-st.markdown(
-    """
-    <style>
-        div[data-testid="column"]:nth-of-type(3)
-        {
-            text-align: end;
-        } 
-    </style>
-    """,unsafe_allow_html=True
-)
-
-col1,col2,col3 = st.columns(3)
-
 # Logo and title
-with col1:
-    st.title("Prompt Bot")
-
-with col3:
-    st.image("./images/difc-logo.svg", width = 150)
+st.image("./images/difc-logo.png", width = 150)
+st.image("./images/prompt-bot.svg", width = 450)
 
 # Define OpenAI client
 client = OpenAI(api_key=st.secrets["api_key"])
