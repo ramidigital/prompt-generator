@@ -1,10 +1,11 @@
 from openai import OpenAI
 import streamlit as st
 import re
+
 # Page configuration
 st.set_page_config(page_title='DIFC Prompt Generator', layout='wide')
 
-# Hide Streamlit header and footer
+# Hide streamlit header and footer
 st.markdown("""
 <style>
 footer { visibility: hidden; }
@@ -18,10 +19,11 @@ padding-right: 5rem;
 </style>
 """, unsafe_allow_html=True)
 
+# Logo and title
 st.image("difc-logo.svg", width = 150)
 st.title("DIFC Prompt Generator")
 
-client = OpenAI(api_key="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")
+client = OpenAI(api_key=st.secrets["api_key"])
 variables = []
 variable_string = "\n".join([f"{{$ {var.upper()} }}" for var in variables])
 
