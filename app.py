@@ -552,5 +552,6 @@ if prompt := st.chat_input("Describe your prompt"):
 
         extracted_prompt_template = extract_prompt(message)
         formatted_response = pretty_print(extracted_prompt_template)
+        st.write(formatted_response)
 
     st.session_state.messages.append({"role": "assistant", "content": formatted_response})
