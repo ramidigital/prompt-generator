@@ -3,7 +3,7 @@ import streamlit as st
 import re
 
 # Page configuration
-st.set_page_config(page_title='DIFC Prompt Generator', layout='wide', page_icon="./images/faviocn-difc.ico")
+st.set_page_config(page_title='DIFC | Prompt Bot', layout='wide', page_icon="./images/faviocn-difc.ico")
 
 # Hide streamlit header and footer
 st.markdown("""
@@ -21,10 +21,12 @@ padding-right: 5rem;
 
 # Logo and title
 st.image("./images/difc-logo.svg", width = 150)
-st.image("./images/prompt-bot.png", width = 400)
-#st.title("DIFC Prompt Generator")
+st.title("Prompt Bot")
 
+# Define OpenAI client
 client = OpenAI(api_key=st.secrets["api_key"])
+
+# Define variables and metaprompt
 variables = []
 variable_string = "\n".join([f"{{$ {var.upper()} }}" for var in variables])
 
