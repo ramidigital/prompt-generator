@@ -18,7 +18,21 @@ padding-right: 5rem;
 }
 </style>
 """, unsafe_allow_html=True)
+
+# Change column alignment
+st.markdown(
+    """
+    <style>
+        div[data-testid="column"]:nth-of-type(2)
+        {
+            text-align: end;
+        } 
+    </style>
+    """,unsafe_allow_html=True
+)
+
 col1,col2 = st.columns(2)
+
 # Logo and title
 with col1:
     st.title("Prompt Bot")
