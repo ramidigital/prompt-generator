@@ -20,7 +20,7 @@ padding-right: 5rem;
 """, unsafe_allow_html=True)
 
 # Logo and title
-st.image("./images/difc-logo.png", width = 150)
+st.image("./images/difc-logo.svg", width = 150)
 st.image("./images/prompt-bot.svg", width = 450)
 
 # Define OpenAI client
