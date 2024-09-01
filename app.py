@@ -37,7 +37,7 @@ col1,col2,col3 = st.columns(3)
 with col1:
     st.title("Prompt Bot")
 
-with col2:
+with col3:
     st.image("./images/difc-logo.svg", width = 150)
 
 # Define OpenAI client
