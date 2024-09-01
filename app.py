@@ -23,7 +23,7 @@ padding-right: 5rem;
 st.markdown(
     """
     <style>
-        div[data-testid="column"]:nth-of-type(2)
+        div[data-testid="column"]:nth-of-type(3)
         {
             text-align: end;
         } 
@@ -31,7 +31,7 @@ st.markdown(
     """,unsafe_allow_html=True
 )
 
-col1,col2 = st.columns(2)
+col1,col2,col3 = st.columns(3)
 
 # Logo and title
 with col1:
