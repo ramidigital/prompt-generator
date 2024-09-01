@@ -21,7 +21,9 @@ padding-right: 5rem;
 
 # Logo and title
 st.image("./images/difc-logo.svg", width = 150)
+st.markdown(" ")
 st.image("./images/prompt-bot.svg", width = 350)
+st.markdown(" ")
 
 # Define OpenAI client
 client = OpenAI(api_key=st.secrets["api_key"])
