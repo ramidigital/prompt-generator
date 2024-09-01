@@ -18,10 +18,13 @@ padding-right: 5rem;
 }
 </style>
 """, unsafe_allow_html=True)
-
+col1,col2 = st.columns(2)
 # Logo and title
-st.image("./images/difc-logo.svg", width = 150)
-st.title("Prompt Bot")
+with col1:
+    st.title("Prompt Bot")
+
+with col2:
+    st.image("./images/difc-logo.svg", width = 150)
 
 # Define OpenAI client
 client = OpenAI(api_key=st.secrets["api_key"])
