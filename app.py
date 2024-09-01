@@ -3,7 +3,7 @@ import streamlit as st
 import re
 
 # Page configuration
-st.set_page_config(page_title='DIFC Prompt Generator', layout='wide')
+st.set_page_config(page_title='DIFC Prompt Generator', layout='wide', page_icon="./images/faviocn-difc.ico")
 
 # Hide streamlit header and footer
 st.markdown("""
@@ -20,8 +20,8 @@ padding-right: 5rem;
 """, unsafe_allow_html=True)
 
 # Logo and title
-st.image("difc-logo.svg", width = 150)
-st.image("prompt-bot.png", width = 400)
+st.image("./images/difc-logo.svg", width = 150)
+st.image("./images/prompt-bot.png", width = 400)
 #st.title("DIFC Prompt Generator")
 
 client = OpenAI(api_key=st.secrets["api_key"])
